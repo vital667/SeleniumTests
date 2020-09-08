@@ -16,21 +16,7 @@ import java.util.List;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class GoogleTest {
-    private WebDriver webDriver;
-
-    @BeforeMethod
-    public void beforeTest() {
-        System.setProperty("webdriver.chrome.driver", "src/driver/chromedriver");
-        webDriver = new ChromeDriver();
-    }
-
-    @AfterMethod
-    public void afterTest() {
-        webDriver.close();
-        webDriver.quit();
-    }
-
+public class GoogleTest extends TestCase{
 
     @Test
     public void testGoogle() {
